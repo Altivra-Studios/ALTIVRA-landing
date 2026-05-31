@@ -274,7 +274,7 @@
   <div class="container">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective April 19, 2026</p>
+    <p class="effective">Effective May 31, 2026</p>
   </div>
 </header>
 
@@ -312,6 +312,20 @@
     <li>Anonymized usage analytics — which features you open, session frequency. This data is never tied to your personal identity.</li>
   </ul>
 
+  <h3>Health data (Apple HealthKit) — opt-in only</h3>
+  <p>
+    If you grant permission, the iPad app reads the following data from Apple HealthKit to auto-fill your Sleep Log, inform FRMS fatigue scoring per FAA guidelines, and surface recovery trends. Each data type can be granted or denied independently at any time in <span class="mono">iOS Settings → Privacy &amp; Security → Health → Altivra</span>.
+  </p>
+  <ul>
+    <li><strong>Sleep analysis</strong> — sleep periods and stages (REM, deep, light, awake). Auto-fills your Sleep Log and feeds the fatigue engine.</li>
+    <li><strong>Heart rate variability (HRV)</strong> — trended to surface recovery status alongside your fatigue score.</li>
+    <li><strong>Resting heart rate</strong> — baseline tracking to detect over-exertion patterns across long-haul rotations.</li>
+    <li><strong>Active energy, steps, and workouts</strong> — context for exercise recommendations between flights and during layovers.</li>
+  </ul>
+  <p>
+    Altivra <strong>only reads</strong> health data — it never writes to HealthKit and never modifies your records. Health data is processed entirely on your iPad and is <strong>never transmitted to Altivra's servers, Firebase, FlightAware, Anthropic, or any third party</strong>. Apple's HealthKit framework enforces this at the operating system level. You can revoke any or all permissions at any time in iOS Settings, and the app gracefully degrades to manual sleep entry if permissions are denied.
+  </p>
+
   <h2><span class="num">03</span><span>How we use your data</span></h2>
   <ul>
     <li>Deliver the app's features (roster display, fatigue tracking, pay verification, etc.)</li>
@@ -326,6 +340,7 @@
 
   <h2><span class="num">04</span><span>Where your data lives</span></h2>
   <ul>
+    <li><strong>Apple Health (HealthKit) data</strong> — stays on your iPad <em>only</em>. Read by the app, processed locally, never uploaded. Apple's HealthKit framework enforces this at the OS level — even Altivra's own servers cannot access it.</li>
     <li><strong>Flight, logbook, pay, and fatigue data</strong> — stored in <em>your</em> iCloud, encrypted end-to-end. We, as a company, do not have access to the contents.</li>
     <li><strong>Waitlist emails, account identifiers, Firebase Auth</strong> — stored in Google Firebase (Google Cloud), encrypted in transit and at rest</li>
     <li><strong>Cached data on your iPad</strong> — encrypted by iOS using standard Apple data protection</li>
@@ -347,6 +362,7 @@
   <ul>
     <li>We don't <strong>sell</strong> your data. Ever.</li>
     <li>We don't <strong>share</strong> your data with your airline, your carrier, or any other aviation employer.</li>
+    <li>We don't <strong>send your HealthKit data anywhere</strong>. Sleep, HRV, heart rate, and activity read from Apple Health stay on your iPad. Never uploaded, never logged on our servers, never seen by us, never shared with any third party.</li>
     <li>We don't <strong>show ads</strong>. Not now, not at scale.</li>
     <li>We don't <strong>track you across the web</strong> — no cross-site cookies, no fingerprinting.</li>
     <li>We don't <strong>use your content to train AI</strong> on a population level.</li>
