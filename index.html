@@ -749,13 +749,34 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1120px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1320px;
       margin: 0 auto;
     }
-    @media (max-width: 880px) {
+    @media (max-width: 1180px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
+    }
+    @media (max-width: 720px) {
       .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
+    }
+    .price-card .tier-badge {
+      display: block;
+      margin: 0 auto 14px;
+      object-fit: contain;
+    }
+    .price-card .tier-badge.size-sm { width: 48px; height: 48px; opacity: 0.85; }
+    .price-card .tier-badge.size-md { width: 80px; height: 80px; }
+    .price-card .tier-badge.size-md.dim { opacity: 0.7; }
+    .founding-ribbon-badge {
+      width: 150px;
+      height: 150px;
+      flex-shrink: 0;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 32px rgba(76,154,255,0.35));
+    }
+    @media (max-width: 720px) {
+      .founding-ribbon-badge { width: 110px; height: 110px; }
     }
     .price-card {
       padding: 40px 34px 36px;
@@ -1300,7 +1321,7 @@
           </svg>
         </div>
         <h3>Wingman</h3>
-        <p>Smart roster that auto-imports from any airline system. Duty, rest, and block hours at a glance. With Wingman+ AI built in — included with HEAVY.</p>
+        <p>Smart roster that auto-imports from any airline system. Duty, rest, and block hours at a glance. With Wingman AI built in — included with HEAVY.</p>
       </article>
 
       <article class="feature reveal">
@@ -1461,22 +1482,23 @@
       <span class="eyebrow">Pricing</span>
       <h2 class="section-title"><span class="display-gradient">Honest pricing.</span><br/><span class="accent">Founding loyalty rewarded.</span></h2>
       <p class="section-lede">
-        A 30-day trial that's full HEAVY, not a reduced preview. A HEAVY tier that replaces what most pilots pay across five fragmented subscriptions. A SUPER tier arriving in v1.1 when AI and live flight tracking are ready, server-side cost-protected. And a reward for the pilots who believed first.
+        A 30-day trial that's full HEAVY, not a reduced preview. A MEDIUM tier for pilots who just need a great logbook. A HEAVY tier that replaces what most pilots pay across five fragmented subscriptions. A SUPER tier arriving in v1.1 when AI and live flight tracking are ready, server-side cost-protected. And a reward for the pilots who believed first.
       </p>
     </div>
 
     <!-- Founding 500 — promotional banner above the primary tiers -->
     <div class="founding-ribbon reveal">
       <div class="founding-ribbon-inner">
+        <img src="photos/badges/altivra-foundingcaptain.png" alt="Founding Captain badge" class="founding-ribbon-badge" />
         <div class="founding-ribbon-left">
           <span class="founding-badge-inline">FOUNDING 500 · LIMITED</span>
-          <h3>First 500 pilots lock in <strong>$79/year for life</strong><sup style="color:var(--sky-bright);font-size:0.6em;margin-left:2px;">*</sup></h3>
-          <p>Founding Captain designation with numbered lifetime badge, $79/year locked for life, all HEAVY features included, early access to SUPER the moment it ships, and a direct line to product feedback. Once claimed, the rate never moves.</p>
+          <h3>First 500 pilots lock in <strong>$79.99/year — for life</strong><sup style="color:var(--sky-bright);font-size:0.6em;margin-left:2px;">*</sup></h3>
+          <p>Founding Captain designation with a numbered badge, $79.99/year with the annual rate locked for life, all HEAVY features included, early access to SUPER the moment it ships, and a direct line to product feedback. Once claimed, the rate never moves.</p>
           <p class="founding-counter" style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:var(--sky-bright);opacity:0;transition:opacity .6s ease;">
             <span id="founding-count">—</span> / 500 seats claimed · <span id="founding-remaining">—</span> remaining
           </p>
           <p class="founding-disclaimer" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.5;">
-            <span style="color:var(--sky-bright);">*</span> Founding Captain is a tier limited to the first 500 subscribers. Grants all HEAVY features at $79/year locked for life, with a numbered badge for your slot. SUPER tier upgrade available at standard pricing when it ships in v1.1.
+            <span style="color:var(--sky-bright);">*</span> Founding rate of $79.99/year auto-renews. The locked-for-life price applies as long as the subscription remains continuously active. Cancelling and resubscribing forfeits the founding rate. Grants all HEAVY features with a numbered badge for your slot. SUPER tier upgrade available at standard pricing when it ships in v1.1.
           </p>
         </div>
         <a href="#waitlist" class="price-cta cta-primary founding-ribbon-cta">Reserve my seat</a>
@@ -1486,6 +1508,7 @@
     <div class="pricing-grid">
       <!-- LIGHT (30-day trial) -->
       <div class="price-card reveal">
+        <img src="photos/badges/altivra-light.png" alt="LIGHT badge" class="tier-badge size-sm" loading="lazy" />
         <h3>LIGHT</h3>
         <p class="tagline">Below the radar. For now.</p>
         <div class="price-amount">
@@ -1497,7 +1520,7 @@
           <li>Full logbook + auto roster import</li>
           <li>Pay verification with dispute workflow</li>
           <li>Sleep Planner + HealthKit integration</li>
-          <li>Wingman+ AI assistant</li>
+          <li>Wingman AI assistant</li>
           <li>iPhone companion + Apple Watch basics <span style="color:#D4A017;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">v1.1</span></li>
           <li>All EFB tools, calculators, currency tracking</li>
           <li><strong>Read-only access continues forever post-trial</strong></li>
@@ -1506,9 +1529,32 @@
         <a href="#waitlist" class="price-cta cta-ghost">Notify me at launch</a>
       </div>
 
+      <!-- MEDIUM (professional logbook) -->
+      <div class="price-card reveal">
+        <img src="photos/badges/altivra-medium.png" alt="MEDIUM badge" class="tier-badge size-md" loading="lazy" />
+        <h3>MEDIUM</h3>
+        <p class="tagline">Professional Logbook.</p>
+        <div class="price-amount">
+          <span class="num"><span class="cur">$</span>69.99</span>
+          <span class="unit">/ year</span>
+        </div>
+        <div class="price-equiv">or $8.99 / month · billed monthly</div>
+        <ul class="price-features">
+          <li>Full logbook with manual flight entry</li>
+          <li>Aircraft memory + Airport database</li>
+          <li>PDF logbook export — unwatermarked</li>
+          <li>CSV import — migrate from any platform</li>
+          <li>Basic EFB tools</li>
+          <li>Sleep log</li>
+          <li>For corporate pilots, instructors, and pilots who don't need automated airline roster import</li>
+        </ul>
+        <a href="#waitlist" class="price-cta cta-ghost">Notify me at launch</a>
+      </div>
+
       <!-- HEAVY (recommended) -->
       <div class="price-card reveal">
         <div class="founding-badge coming-soon" style="background:linear-gradient(135deg,#D4A017,#F2C94C);color:#0B1E34;">MOST POPULAR</div>
+        <img src="photos/badges/altivra-heavy.png" alt="HEAVY badge" class="tier-badge size-md" loading="lazy" />
         <h3>HEAVY</h3>
         <p class="tagline">You leave wake now.</p>
         <div class="price-amount">
@@ -1523,7 +1569,7 @@
           <li>HealthKit integration (ring trackers, fitness wearables, Apple Watch)</li>
           <li>Pay verification — 15 rule types, dispute workflow</li>
           <li>Briefing Room · weather, route, crew</li>
-          <li><strong>Wingman+ AI</strong> with Claude API (included)</li>
+          <li><strong>Wingman AI</strong> assistant (with sensible usage included)</li>
           <li>iPhone companion + Apple Watch basics <span style="color:#D4A017;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">v1.1</span></li>
           <li>Unwatermarked PDF export · priority support</li>
         </ul>
@@ -1533,19 +1579,20 @@
       <!-- SUPER (coming soon — deferred to v1.1) -->
       <div class="price-card coming-soon reveal">
         <div class="founding-badge coming-soon">COMING SOON · v1.1</div>
+        <img src="photos/badges/altivra-super.png" alt="SUPER badge" class="tier-badge size-md dim" loading="lazy" />
         <h3>SUPER</h3>
         <p class="tagline">Heavy iron.</p>
         <div class="price-amount">
-          <span class="num"><span class="cur">$</span>159</span>
+          <span class="num"><span class="cur">$</span>129.99</span>
           <span class="unit">/ year</span>
         </div>
-        <div class="price-equiv">or $19.99 / month · arrives with v1.1</div>
+        <div class="price-equiv">or $17.99 / month · arrives with v1.1</div>
         <ul class="price-features">
           <li><strong>Everything in HEAVY</strong></li>
           <li>FlightAware · 100 queries/month included</li>
           <li>Optional query bundles ($9.99/50, $19.99/150)</li>
           <li>BYOK FlightAware — connect your own AeroAPI</li>
-          <li>Wingman+ premium quotas (higher AI caps)</li>
+          <li><strong>Wingman+ AAI</strong> (Advanced AI) — Coming Soon v1.1</li>
           <li>Apple Watch advanced — on-wrist AI fatigue alerts, HRV correlation, real-time alertness coaching</li>
           <li>Premium analytics — year-over-year, route patterns, fatigue trends</li>
         </ul>
@@ -1554,7 +1601,7 @@
     </div>
 
     <p class="founding-footnote reveal">
-      <span class="mono star">★</span> <strong>SUPER tier ships with Altivra v1.1.</strong> The Wingman+ premium quotas and FlightAware enrichment need a secure, cost-protected server-side rollout before we're comfortable putting them behind a paywall. Founding 500 members get early access the moment SUPER ships — and can upgrade by paying the tier difference; the Founding HEAVY rate stays locked regardless.
+      <span class="mono star">★</span> <strong>SUPER tier ships with Altivra v1.1.</strong> The Wingman+ AAI (Advanced AI) and FlightAware enrichment need a secure, cost-protected server-side rollout before we're comfortable putting them behind a paywall. Founding 500 members get early access the moment SUPER ships — and can upgrade by paying the tier difference; the Founding HEAVY rate of $79.99/year stays locked regardless.
     </p>
 
     <p class="founding-footnote reveal mono" style="margin-top:18px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;">
@@ -1579,7 +1626,7 @@
         In aviation, Captain is the rank earned through years of command. Founding Captain extends that same idea: a recognition earned by arriving first, marked by a numbered badge that stays with you for life.
       </p>
       <p>
-        The tier grants every HEAVY feature &mdash; briefing, fatigue awareness, aircraft history, crew memory, airport intelligence, reports, and connected tools &mdash; at a price locked for life at $79/year. SUPER tier remains the upgrade path when it ships in v1.1.
+        The tier grants every HEAVY feature &mdash; briefing, fatigue awareness, aircraft history, crew memory, airport intelligence, reports, and connected tools &mdash; at $79.99/year with the annual rate locked for life, as long as the subscription stays continuously active. SUPER tier remains the upgrade path when it ships in v1.1.
       </p>
       <p style="font-size:20px;font-weight:500;color:var(--sky-bright);margin-top:32px;">
         Founding Captain &middot; 500 seats, numbered, for life.
@@ -1638,18 +1685,18 @@
       <details class="faq-item reveal">
         <summary>What's the difference between HEAVY and SUPER?</summary>
         <div class="faq-body">
-          <p style="margin-bottom:14px;"><strong>HEAVY</strong> ($99/yr) is the complete tier for a working pilot: unlimited logbook, auto roster import, full FRMS with Layover Advisor and Sleep Planner, HealthKit integration (ring trackers, fitness wearables, Apple Watch — anything that feeds into Apple Health), Briefing Room, pay verification with the dispute workflow no other pilot app has, iPhone companion, Apple Watch basics, Wingman+ AI assistant. If you want a single app that replaces the patchwork most pilots juggle — HEAVY is it. <strong>HEAVY launches with v1.0.</strong></p>
-          <p><strong>SUPER</strong> ($159/yr) adds three things HEAVY doesn't: <strong>FlightAware enrichment</strong> (real routing, live tracking, auto-block-times), <strong>Wingman+ premium quotas</strong> (higher AI limits for power users), and <strong>Apple Watch advanced features</strong> (on-wrist AI fatigue alerts, HRV correlation, real-time alertness coaching, premium complications). <strong>SUPER ships with v1.1</strong> — deliberately deferred so the FlightAware proxy and Wingman+ premium server-side cost controls roll out properly, not as half-finished features.</p>
+          <p style="margin-bottom:14px;"><strong>HEAVY</strong> ($99/yr) is the complete tier for a working pilot: unlimited logbook, auto roster import, full FRMS with Layover Advisor and Sleep Planner, HealthKit integration (ring trackers, fitness wearables, Apple Watch — anything that feeds into Apple Health), Briefing Room, pay verification with the dispute workflow no other pilot app has, iPhone companion, Apple Watch basics, Wingman AI assistant. If you want a single app that replaces the patchwork most pilots juggle — HEAVY is it. <strong>HEAVY launches with v1.0.</strong></p>
+          <p><strong>SUPER</strong> ($129.99/yr) adds three things HEAVY doesn't: <strong>FlightAware enrichment</strong> (real routing, live tracking, auto-block-times), <strong>Wingman+ AAI</strong> (Advanced AI for power users), and <strong>Apple Watch advanced features</strong> (on-wrist AI fatigue alerts, HRV correlation, real-time alertness coaching, premium complications). <strong>SUPER ships with v1.1</strong> — deliberately deferred so the FlightAware proxy and Wingman+ AAI server-side cost controls roll out properly, not as half-finished features.</p>
         </div>
       </details>
 
       <details class="faq-item reveal">
-        <summary>How does the Founding 500 lifetime lock-in work?</summary>
+        <summary>How does the Founding 500 lock-in work?</summary>
         <div class="faq-body">
-          <p style="margin-bottom:14px;">The first 500 pilots who subscribe to Founding 500 lock in <strong>$79/year for HEAVY</strong> — for as long as they stay subscribed. Even when public HEAVY pricing rises after launch (it will), your $79 HEAVY rate never moves.</p>
+          <p style="margin-bottom:14px;">The first 500 pilots who subscribe to Founding 500 lock in <strong>$79.99/year for HEAVY</strong> — an auto-renewing annual subscription, with the rate locked for as long as the subscription stays continuously active. Even when public HEAVY pricing rises after launch (it will), your $79.99 rate never moves.</p>
           <p style="margin-bottom:14px;"><strong>To be fully transparent:</strong> your lock-in is specifically for the HEAVY tier. Every new feature that ships <em>inside</em> HEAVY — new reports, platform improvements, tier-internal enhancements — arrives at your Founding rate at no extra cost.</p>
-          <p style="margin-bottom:14px;">The SUPER tier is a separate, higher subscription ($159/yr) arriving in v1.1 that adds FlightAware enrichment, Wingman+ premium, and Apple Watch advanced features. If you ever want SUPER, you can upgrade at any time by paying the tier difference, and your HEAVY rate stays locked. Founding 500 members get early access the moment SUPER ships.</p>
-          <p>Cancellation forfeits the grandfathered rate permanently. Resubscription happens at the current public HEAVY rate.</p>
+          <p style="margin-bottom:14px;">The SUPER tier is a separate, higher subscription ($129.99/yr) arriving in v1.1 that adds FlightAware enrichment, Wingman+ AAI, and Apple Watch advanced features. If you ever want SUPER, you can upgrade at any time by paying the tier difference, and your HEAVY rate stays locked. Founding 500 members get early access the moment SUPER ships.</p>
+          <p>Cancellation forfeits the founding rate permanently. Resubscription happens at the current public HEAVY rate.</p>
         </div>
       </details>
 
@@ -1699,12 +1746,15 @@
 
       <details class="faq-item reveal">
         <summary>Can I pay monthly?</summary>
-        <div class="faq-body">Yes — HEAVY is $99/year or $12.99/month. SUPER (v1.1) is $159/year or $19.99/month. The Founding 500 tier is annual only at $79/yr — it's a commitment to the early journey in exchange for lifetime pricing.</div>
+        <div class="faq-body">Yes — MEDIUM is $69.99/year or $8.99/month. HEAVY is $99/year or $12.99/month. SUPER (v1.1) is $129.99/year or $17.99/month. The Founding 500 tier is annual only at $79.99/yr — it's a commitment to the early journey in exchange for the annual rate locked for life.</div>
       </details>
 
       <details class="faq-item reveal">
-        <summary>What is Wingman+?</summary>
-        <div class="faq-body">An AI assistant, powered by Claude, that understands your roster, logbook, and rest data together. Ask questions in plain English — "when's my next long-haul?", "how many layovers in Tokyo this quarter?", "do I have enough rest for the LHR pairing?" — and get instant answers. <strong>Included in HEAVY</strong> with sensible usage caps. <strong>SUPER tier</strong> (v1.1) unlocks premium quotas for power users.</div>
+        <summary>What is Wingman? What is Wingman+ AAI?</summary>
+        <div class="faq-body">
+          <p style="margin-bottom:14px;"><strong>Wingman</strong> is the AI assistant powered by Claude that understands your roster, logbook, and rest data together. Ask questions in plain English — "when's my next long-haul?", "how many layovers in Tokyo this quarter?", "do I have enough rest for the LHR pairing?" — and get instant answers. <strong>Included with HEAVY</strong> at sensible usage levels.</p>
+          <p><strong>Wingman+ AAI</strong> (Advanced AI) is the SUPER-tier upgrade arriving in v1.1: deeper reasoning, larger context windows, and higher usage caps for power users. <strong>Coming Soon v1.1.</strong></p>
+        </div>
       </details>
 
       <details class="faq-item reveal">
@@ -1724,7 +1774,7 @@
 
       <details class="faq-item reveal">
         <summary>Will prices go up after launch?</summary>
-        <div class="faq-body">Yes — deliberately. The $99/yr HEAVY rate is intentionally priced under what most pilots are paying across multiple fragmented apps. Once Altivra matures past public launch, HEAVY pricing will rise (likely toward $119/yr in a future cycle). SUPER starts at $159/yr and is unlikely to drop. <strong>Founding 500 members are immune to all future increases</strong> — the $79/yr rate stays locked on HEAVY for as long as you stay subscribed.</div>
+        <div class="faq-body">Yes — deliberately. The $99/yr HEAVY rate is intentionally priced under what most pilots are paying across multiple fragmented apps. Once Altivra matures past public launch, HEAVY pricing will rise (likely toward $119/yr in a future cycle). SUPER starts at $129.99/yr and is unlikely to drop. <strong>Founding 500 members are immune to all future increases</strong> — the $79.99/yr rate stays locked on HEAVY for as long as you stay continuously subscribed.</div>
       </details>
     </div>
   </div>
@@ -1739,9 +1789,9 @@
         Join the Founding 500
       </span>
       <h2><span class="display-gradient">Your next flight </span><span class="accent">deserves better.</span></h2>
-      <p>Altivra launches August 2026. The first 500 pilots to subscribe lock in HEAVY at $79/year — for life.<sup style="color:var(--sky-bright);font-size:0.6em;margin-left:2px;">*</sup></p>
+      <p>Altivra launches August 2026. The first 500 pilots to subscribe lock in HEAVY at $79.99/year — annual rate locked for life.<sup style="color:var(--sky-bright);font-size:0.6em;margin-left:2px;">*</sup></p>
       <p style="margin:-24px auto 34px;font-size:12px;color:var(--muted);line-height:1.5;max-width:560px;">
-        <span style="color:var(--sky-bright);">*</span> Applies to the HEAVY tier while subscription remains active.
+        <span style="color:var(--sky-bright);">*</span> Auto-renewing annual subscription. The locked-for-life rate applies as long as the subscription remains continuously active.
       </p>
 
       <form class="waitlist" id="waitlist-bottom" novalidate style="margin: 0 auto;">
