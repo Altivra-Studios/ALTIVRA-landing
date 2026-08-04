@@ -10,7 +10,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Altivra — The Operating System for Aviators" />
-  <meta property="og:description" content="Every pilot is an Aviator. Some fly Heavy. Few fly Super. Only 500 become Founding Captains." />
+  <meta property="og:description" content="Roster, logbook, fatigue, and pay — unified on iPad. One edition, everything included. Built by a commercial pilot." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.altivra.app" />
   <meta property="og:image" content="https://www.altivra.app/photos/logo.png" />
@@ -20,7 +20,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Altivra — The Operating System for Aviators" />
-  <meta name="twitter:description" content="Every flight. Every rest. In one iPad. Launching August 2026." />
+  <meta name="twitter:description" content="Roster, logbook, fatigue, and pay — unified on iPad. One edition, everything included. Launching August 2026." />
   <meta name="twitter:image" content="https://www.altivra.app/photos/logo.png" />
 
   <link rel="canonical" href="https://www.altivra.app/" />
@@ -687,75 +687,12 @@
     }
 
     /* ═══  PRICING  ═══ */
-    .founding-counter.visible { opacity: 1 !important; }
-
-    .founding-ribbon {
-      max-width: 1120px;
-      margin: 0 auto 44px;
-      padding: 30px 36px;
-      background:
-        linear-gradient(135deg, rgba(76,154,255,0.16) 0%, rgba(20,38,60,0.45) 100%);
-      border: 1px solid rgba(76,154,255,0.45);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 20px 50px -20px rgba(76,154,255,0.35);
-    }
-    .founding-ribbon-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-    .founding-ribbon-left { flex: 1; min-width: 280px; }
-    .founding-badge-inline {
-      display: inline-block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      color: var(--sky-bright);
-      background: rgba(76,154,255,0.15);
-      border: 1px solid rgba(76,154,255,0.35);
-      padding: 5px 12px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-    .founding-ribbon h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(20px, 2.2vw, 26px);
-      font-weight: 500;
-      color: var(--ivory);
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
-    }
-    .founding-ribbon h3 strong {
-      color: var(--sky-bright);
-      font-weight: 600;
-    }
-    .founding-ribbon p {
-      font-size: 14px;
-      color: var(--ivory-dim);
-      line-height: 1.6;
-      max-width: 720px;
-    }
-    .founding-ribbon-cta {
-      white-space: nowrap;
-      padding: 14px 26px !important;
-      flex-shrink: 0;
-    }
-    @media (max-width: 720px) {
-      .founding-ribbon-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
-    }
-
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      max-width: 1320px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 860px;
       margin: 0 auto;
-    }
-    @media (max-width: 1180px) {
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
     }
     @media (max-width: 720px) {
       .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
@@ -765,19 +702,7 @@
       margin: 0 auto 14px;
       object-fit: contain;
     }
-    .price-card .tier-badge.size-sm { width: 48px; height: 48px; opacity: 0.85; }
     .price-card .tier-badge.size-md { width: 80px; height: 80px; }
-    .price-card .tier-badge.size-md.dim { opacity: 0.7; }
-    .founding-ribbon-badge {
-      width: 150px;
-      height: 150px;
-      flex-shrink: 0;
-      object-fit: contain;
-      filter: drop-shadow(0 12px 32px rgba(76,154,255,0.35));
-    }
-    @media (max-width: 720px) {
-      .founding-ribbon-badge { width: 110px; height: 110px; }
-    }
     .price-card {
       padding: 40px 34px 36px;
       background: linear-gradient(180deg, rgba(20,38,60,0.55) 0%, rgba(20,38,60,0.2) 100%);
@@ -799,55 +724,6 @@
         0 24px 58px -20px rgba(76,154,255,0.42),
         inset 0 1px 0 rgba(111,178,255,0.22);
       transform: translateY(-6px);
-    }
-    .founding-badge {
-      position: absolute;
-      top: -13px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--sky-bright) 0%, var(--sky-dim) 100%);
-      color: #fff;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      padding: 6px 16px;
-      border-radius: 999px;
-      box-shadow: 0 4px 16px rgba(47,128,237,0.45);
-      white-space: nowrap;
-    }
-    /* Coming soon variant — used for SUPER tier pre-launch.
-       Dimmer, gold-accented, no hover lift, no purchase CTA. */
-    .price-card.coming-soon {
-      border: 1px dashed rgba(212,160,23,0.55);
-      background: linear-gradient(180deg, rgba(212,160,23,0.08) 0%, rgba(20,38,60,0.2) 100%);
-      opacity: 0.78;
-      box-shadow: none;
-      transform: none;
-    }
-    .price-card.coming-soon:hover {
-      border-color: rgba(212,160,23,0.7);
-      transform: none;
-    }
-    .founding-badge.coming-soon {
-      background: linear-gradient(135deg, #D4A017 0%, #E3B341 100%);
-      box-shadow: 0 4px 16px rgba(212,160,23,0.4);
-    }
-    .price-card.coming-soon .price-amount .num,
-    .price-card.coming-soon .price-equiv {
-      color: rgba(244,246,249,0.55);
-    }
-    .price-card.coming-soon .price-cta {
-      pointer-events: none;
-      cursor: default;
-      background: transparent;
-      border: 1px dashed rgba(212,160,23,0.4);
-      color: #D4A017;
-      font-weight: 500;
-    }
-    .price-card.coming-soon .price-cta:hover {
-      background: transparent;
-      color: #D4A017;
     }
     .price-card h3 {
       font-family: 'Space Grotesk', sans-serif;
@@ -887,13 +763,6 @@
       color: var(--muted);
       font-size: 14px;
       font-weight: 500;
-    }
-    .price-strike {
-      text-decoration: line-through;
-      text-decoration-color: rgba(255,255,255,0.35);
-      color: var(--muted);
-      font-size: 18px;
-      margin-right: 4px;
     }
     .price-equiv {
       font-size: 13px;
@@ -965,7 +834,6 @@
       font-size: 13px;
       line-height: 1.65;
     }
-    .founding-footnote .star { color: var(--sky-bright); }
 
     /* ═══  PRINCIPLES  ═══ */
     .principles {
@@ -1169,7 +1037,7 @@
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#waitlist" class="btn-primary">Reserve seat</a>
+        <a href="#waitlist" class="btn-primary">Join waitlist</a>
       </div>
     </nav>
   </div>
@@ -1196,11 +1064,11 @@
 
         <form id="waitlist" class="waitlist" novalidate>
           <input type="email" name="email" placeholder="captain@yourairline.com" autocomplete="email" required aria-label="Your email address" />
-          <button type="submit">Reserve my seat</button>
+          <button type="submit">Join the waitlist</button>
         </form>
 
         <p class="hero-fineprint">
-          <strong>500 Founding seats available.</strong> No spam — one email when your seat opens.
+          No spam — one email when Altivra launches.
         </p>
         <p class="hero-success" id="success">You're on the list. We'll be in touch soon.</p>
       </div>
@@ -1320,8 +1188,8 @@
             <path d="M16 5 V3"/>
           </svg>
         </div>
-        <h3>Wingman</h3>
-        <p>Smart roster import — Aeromexico supported today, with more airline formats added as pilots send us theirs. Duty, rest, and block hours at a glance. With Wingman built in — included with HEAVY.</p>
+        <h3>Roster</h3>
+        <p>Smart roster import — Aeromexico supported today, with more airline formats added as pilots send us theirs. Duty, rest, and block hours at a glance. Manual entry and CSV import work for every pilot in the meantime.</p>
       </article>
 
       <article class="feature reveal">
@@ -1348,7 +1216,7 @@
           </svg>
         </div>
         <h3>Digital Logbook</h3>
-        <p>Every flight, every hour, every airport — visualized on a world map. Logbook migration from any major pilot app or spreadsheet format. PDF export that looks official. <span style="color:#D4A017;">FlightAware auto-enrichment ships with SUPER in v1.1.</span></p>
+        <p>Every flight, every hour, every airport — visualized on a world map. Logbook migration from any major pilot app or spreadsheet format. PDF export that looks official. FlightAware enrichment included — matched to real routing, gates, and actual block times (fair-use quota).</p>
       </article>
 
       <article class="feature reveal">
@@ -1468,8 +1336,8 @@
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">IV</div>
-        <h4>iPhone companion <span style="color:#D4A017;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-left:6px;">v1.1</span></h4>
-        <p>A focused companion on your phone — roster glance, fatigue check-in, quick logbook entries. The deck in your pocket. Arrives with Apple Watch basics in v1.1.</p>
+        <h4>iPhone companion</h4>
+        <p>A focused companion on your phone from day one — roster, fatigue score computed on-device, weather, and Layover Explorer. The deck in your pocket. Apple Watch basics arrive in v1.1.</p>
       </div>
     </div>
   </div>
@@ -1480,158 +1348,66 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow">Pricing</span>
-      <h2 class="section-title"><span class="display-gradient">Honest pricing.</span><br/><span class="accent">Founding loyalty rewarded.</span></h2>
+      <h2 class="section-title"><span class="display-gradient">One edition.</span><br/><span class="accent">Everything included.</span></h2>
       <p class="section-lede">
-        A 30-day trial that's full HEAVY, not a reduced preview. A MEDIUM tier for pilots who just need a great logbook. A HEAVY tier that replaces what most pilots pay across five fragmented subscriptions. A SUPER tier arriving in v1.1 when AI and live flight tracking are ready, server-side cost-protected. And a reward for the pilots who believed first.
+        A 30-day trial that's the full app, not a preview. One paid plan with everything Altivra does — no tiers, no feature matrices, no upsells.
       </p>
     </div>
 
-    <!-- Founding 500 — promotional banner above the primary tiers -->
-    <div class="founding-ribbon reveal">
-      <div class="founding-ribbon-inner">
-        <img src="photos/badges/altivra-foundingcaptain.png" alt="Founding Captain badge" class="founding-ribbon-badge" />
-        <div class="founding-ribbon-left">
-          <span class="founding-badge-inline">FOUNDING 500 · LIMITED</span>
-          <h3>First 500 pilots lock in <strong>$79.99/year — for life</strong><sup style="color:var(--sky-bright);font-size:0.6em;margin-left:2px;">*</sup></h3>
-          <p>Founding Captain designation with a numbered badge, $79.99/year with the annual rate locked for life, all HEAVY features included, early access to SUPER the moment it ships, and a direct line to product feedback. Once claimed, the rate never moves.</p>
-          <p class="founding-counter" style="margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:var(--sky-bright);opacity:0;transition:opacity .6s ease;">
-            <span id="founding-count">—</span> / 500 seats claimed · <span id="founding-remaining">—</span> remaining
-          </p>
-          <p class="founding-disclaimer" style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.5;">
-            <span style="color:var(--sky-bright);">*</span> Founding rate of $79.99/year auto-renews. The locked-for-life price applies as long as the subscription remains continuously active. Cancelling and resubscribing forfeits the founding rate. Grants all HEAVY features with a numbered badge for your slot. SUPER tier upgrade available at standard pricing when it ships in v1.1.
-          </p>
-        </div>
-        <a href="#waitlist" class="price-cta cta-primary founding-ribbon-cta">Reserve my seat</a>
-      </div>
-    </div>
-
-    <div class="pricing-grid">
+    <div class="pricing-grid pricing-grid-two">
       <!-- LIGHT (30-day trial) -->
       <div class="price-card reveal">
-        <img src="photos/badges/altivra-light.png" alt="LIGHT badge" class="tier-badge size-sm" loading="lazy" />
+        <img src="photos/badges/altivra-light.png" alt="LIGHT badge" class="tier-badge size-md" loading="lazy" />
         <h3>LIGHT</h3>
-        <p class="tagline">Below the radar. For now.</p>
+        <p class="tagline">The full app, on us, for 30 days.</p>
         <div class="price-amount">
           <span class="num"><span class="cur">$</span>0</span>
           <span class="unit">/ 30 days</span>
         </div>
-        <div class="price-equiv">Full HEAVY features. No card at signup.</div>
+        <div class="price-equiv">Everything HEAVY does. No card at signup.</div>
         <ul class="price-features">
-          <li>Full logbook + roster import (supported airlines)</li>
-          <li>Pay verification with dispute workflow (Aeromexico at launch)</li>
-          <li>Sleep Planner + HealthKit integration</li>
-          <li>Wingman — logbook &amp; regulation lookup</li>
-          <li>iPhone companion + Apple Watch basics <span style="color:#D4A017;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">v1.1</span></li>
-          <li>All EFB tools, calculators, currency tracking</li>
-          <li><strong>Read-only access continues forever post-trial</strong></li>
+          <li>Every module unlocked for 30 days</li>
+          <li>Roster import, Pay Tracker, FRMS, Briefing, Wingman</li>
+          <li>FlightAware enrichment on every flight (fair-use quota)</li>
+          <li>iPhone companion included</li>
+          <li><strong>Read-only access continues forever post-trial</strong> — your data is never held hostage</li>
           <li>One shot. No re-trials.</li>
         </ul>
         <a href="#waitlist" class="price-cta cta-ghost">Notify me at launch</a>
       </div>
 
-      <!-- MEDIUM (professional logbook) -->
-      <div class="price-card reveal">
-        <img src="photos/badges/altivra-medium.png" alt="MEDIUM badge" class="tier-badge size-md" loading="lazy" />
-        <h3>MEDIUM</h3>
-        <p class="tagline">Professional Logbook.</p>
-        <div class="price-amount">
-          <span class="num"><span class="cur">$</span>69.99</span>
-          <span class="unit">/ year</span>
-        </div>
-        <div class="price-equiv">or $8.99 / month · billed monthly</div>
-        <ul class="price-features">
-          <li>Full logbook with manual flight entry</li>
-          <li>Aircraft memory + Airport database</li>
-          <li>PDF logbook export — unwatermarked</li>
-          <li>CSV import — migrate from any platform</li>
-          <li>Basic EFB tools</li>
-          <li>Sleep log</li>
-          <li>For corporate pilots, instructors, and pilots who don't need automated airline roster import</li>
-        </ul>
-        <a href="#waitlist" class="price-cta cta-ghost">Notify me at launch</a>
-      </div>
-
-      <!-- HEAVY (recommended) -->
-      <div class="price-card reveal">
-        <div class="founding-badge coming-soon" style="background:linear-gradient(135deg,#D4A017,#F2C94C);color:#0B1E34;">MOST POPULAR</div>
+      <!-- HEAVY (single paid edition) -->
+      <div class="price-card featured reveal">
         <img src="photos/badges/altivra-heavy.png" alt="HEAVY badge" class="tier-badge size-md" loading="lazy" />
         <h3>HEAVY</h3>
-        <p class="tagline">You leave wake now.</p>
+        <p class="tagline">Everything Altivra does. One plan.</p>
         <div class="price-amount">
           <span class="num"><span class="cur">$</span>99</span>
           <span class="unit">/ year</span>
         </div>
-        <div class="price-equiv">or $12.99 / month · billed monthly</div>
+        <div class="price-equiv">or $9.99 / month · same features either way</div>
         <ul class="price-features">
-          <li><strong>Unlimited</strong> logbook entries</li>
-          <li>Roster import — Aeromexico today, more airlines added continuously</li>
-          <li>Full FRMS stack · Layover Advisor · Sleep Planner</li>
-          <li>HealthKit integration (ring trackers, fitness wearables, Apple Watch)</li>
-          <li>Pay verification — Aeromexico contracts today, more airlines in v1.1</li>
-          <li>Briefing Room · weather, route, crew</li>
-          <li><strong>Wingman</strong> — instant answers from your logbook &amp; regulations</li>
-          <li>iPhone companion + Apple Watch basics <span style="color:#D4A017;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">v1.1</span></li>
-          <li>Unwatermarked PDF export · priority support</li>
+          <li><strong>Unlimited</strong> logbook · manual entry, CSV migration, PDF export</li>
+          <li>Roster import — Aeromexico today; more airlines added as pilots send us theirs</li>
+          <li><strong>FTL limits by regulator</strong> — FAR 117, EASA, AFAC — computed from your logbook</li>
+          <li>Full FRMS stack · Sleep Planner · Layover Advisor · HealthKit</li>
+          <li>Pay Tracker for every pilot · <strong>Aeromexico payslip verification</strong> against the CCT</li>
+          <li>Briefing Room · METAR/TAF, route, crew, airport intel</li>
+          <li>Wingman — logbook &amp; regulation lookup, offline</li>
+          <li><strong>FlightAware enrichment included</strong> — fair-use quota (150 lookups/month)</li>
+          <li>iPhone companion · EFB tools · calculators · currency tracking</li>
         </ul>
-        <a href="#waitlist" class="price-cta cta-ghost">Notify me at launch</a>
-      </div>
-
-      <!-- SUPER (coming soon — deferred to v1.1) -->
-      <div class="price-card coming-soon reveal">
-        <div class="founding-badge coming-soon">COMING SOON · v1.1</div>
-        <img src="photos/badges/altivra-super.png" alt="SUPER badge" class="tier-badge size-md dim" loading="lazy" />
-        <h3>SUPER</h3>
-        <p class="tagline">Heavy iron.</p>
-        <div class="price-amount">
-          <span class="num"><span class="cur">$</span>129.99</span>
-          <span class="unit">/ year</span>
-        </div>
-        <div class="price-equiv">or $17.99 / month · arrives with v1.1</div>
-        <ul class="price-features">
-          <li><strong>Everything in HEAVY</strong></li>
-          <li>FlightAware · 100 queries/month included</li>
-          <li>Optional query bundles ($9.99/50, $19.99/150)</li>
-          <li>BYOK FlightAware — connect your own AeroAPI</li>
-          <li><strong>Wingman+ AAI</strong> (Advanced AI) — Coming Soon v1.1</li>
-          <li>Apple Watch advanced — on-wrist AI fatigue alerts, HRV correlation, real-time alertness coaching</li>
-          <li>Premium analytics — year-over-year, route patterns, fatigue trends</li>
-        </ul>
-        <a class="price-cta" aria-disabled="true">Notify me when SUPER ships</a>
+        <a href="#waitlist" class="price-cta cta-primary">Notify me at launch</a>
       </div>
     </div>
 
     <p class="founding-footnote reveal">
-      <span class="mono star">★</span> <strong>SUPER tier ships with Altivra v1.1.</strong> The Wingman+ AAI (Advanced AI) and FlightAware enrichment need a secure, cost-protected server-side rollout before we're comfortable putting them behind a paywall. Founding 500 members get early access the moment SUPER ships — and can upgrade by paying the tier difference; the Founding HEAVY rate of $79.99/year stays locked regardless.
+      FlightAware enrichment is subject to a fair-use monthly quota (150 lookups) — comfortably covers a full airline month. Cancel anytime. Secure App Store billing.
     </p>
 
     <p class="founding-footnote reveal mono" style="margin-top:18px; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;">
       Cancel anytime · Secure App Store billing · Prices in USD
     </p>
-  </div>
-</section>
-
-<!-- ═══  WHAT IS FOUNDING CAPTAIN  ═══ -->
-<section class="section">
-  <div class="container-editorial">
-    <div class="section-header reveal" style="margin-bottom:48px;">
-      <span class="eyebrow">The badge</span>
-      <h2 class="section-title"><span class="display-gradient">What is</span><br/><span class="accent">Founding Captain?</span></h2>
-    </div>
-
-    <div class="philosophy-inner reveal">
-      <p style="font-size:19px;line-height:1.65;color:var(--ivory-dim);margin-bottom:24px;">
-        Founding Captain is not a feature tier. It is a designation reserved for the first 500 pilots who chose Altivra.
-      </p>
-      <p>
-        In aviation, Captain is the rank earned through years of command. Founding Captain extends that same idea: a recognition earned by arriving first, marked by a numbered badge that stays with you for life.
-      </p>
-      <p>
-        The tier grants every HEAVY feature &mdash; briefing, fatigue awareness, aircraft history, crew memory, airport intelligence, reports, and connected tools &mdash; at $79.99/year with the annual rate locked for life, as long as the subscription stays continuously active. SUPER tier remains the upgrade path when it ships in v1.1.
-      </p>
-      <p style="font-size:20px;font-weight:500;color:var(--sky-bright);margin-top:32px;">
-        Founding Captain &middot; 500 seats, numbered, for life.
-      </p>
-    </div>
   </div>
 </section>
 
@@ -1679,25 +1455,7 @@
     <div class="faq-list">
       <details class="faq-item reveal">
         <summary>When does Altivra launch?</summary>
-        <div class="faq-body">v1.0 launches August 2026. We're using the time to ship right, not fast. Public launch happens once the Founding 500 have worn-tested every module at altitude and in the crew room. Join the waitlist to be first in line.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>What's the difference between HEAVY and SUPER?</summary>
-        <div class="faq-body">
-          <p style="margin-bottom:14px;"><strong>HEAVY</strong> ($99/yr) is the complete tier for a working pilot: the full FRMS stack with Layover Advisor and Sleep Planner, HealthKit integration (ring trackers, fitness wearables, Apple Watch — anything that feeds into Apple Health), Briefing Room, unlimited logbook, roster import for supported airlines, pay verification with a dispute workflow (Aeromexico contracts at launch, more airlines in v1.1), iPhone companion, Apple Watch basics, Wingman assistant. If you want a single app that replaces the patchwork most pilots juggle — HEAVY is it. <strong>HEAVY launches with v1.0.</strong></p>
-          <p><strong>SUPER</strong> ($129.99/yr) adds three things HEAVY doesn't: <strong>FlightAware enrichment</strong> (real routing, live tracking, auto-block-times), <strong>Wingman+ AAI</strong> (Advanced AI for power users), and <strong>Apple Watch advanced features</strong> (on-wrist AI fatigue alerts, HRV correlation, real-time alertness coaching, premium complications). <strong>SUPER ships with v1.1</strong> — deliberately deferred so the FlightAware proxy and Wingman+ AAI server-side cost controls roll out properly, not as half-finished features.</p>
-        </div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>How does the Founding 500 lock-in work?</summary>
-        <div class="faq-body">
-          <p style="margin-bottom:14px;">The first 500 pilots who subscribe to Founding 500 lock in <strong>$79.99/year for HEAVY</strong> — an auto-renewing annual subscription, with the rate locked for as long as the subscription stays continuously active. Even when public HEAVY pricing rises after launch (it will), your $79.99 rate never moves.</p>
-          <p style="margin-bottom:14px;"><strong>To be fully transparent:</strong> your lock-in is specifically for the HEAVY tier. Every new feature that ships <em>inside</em> HEAVY — new reports, platform improvements, tier-internal enhancements — arrives at your Founding rate at no extra cost.</p>
-          <p style="margin-bottom:14px;">The SUPER tier is a separate, higher subscription ($129.99/yr) arriving in v1.1 that adds FlightAware enrichment, Wingman+ AAI, and Apple Watch advanced features. If you ever want SUPER, you can upgrade at any time by paying the tier difference, and your HEAVY rate stays locked. Founding 500 members get early access the moment SUPER ships.</p>
-          <p>Cancellation forfeits the founding rate permanently. Resubscription happens at the current public HEAVY rate.</p>
-        </div>
+        <div class="faq-body">v1.0 launches August 2026. We're using the time to ship right, not fast. Join the waitlist to get one email the day the App Store link goes live.</div>
       </details>
 
       <details class="faq-item reveal">
@@ -1717,7 +1475,7 @@
 
       <details class="faq-item reveal">
         <summary>Will it import my airline's roster?</summary>
-        <div class="faq-body">Today Altivra fully supports Aeromexico PDF rosters, including the crewaccess trip sheet. Other airlines are added as pilots send us their rosters — we are working through the major crew systems (Sabre, AIMS, Jeppesen), which unlock many airlines at once rather than one at a time. If your airline is not supported yet, send us your roster PDF and we will work on it. Manual entry and CSV import work for every pilot in the meantime.</div>
+        <div class="faq-body">Today Altivra fully supports Aeromexico PDF rosters, including the crewaccess trip sheet. Other airlines are added as pilots send us their rosters — we are working through the major crew systems (Sabre, AIMS, Jeppesen), which unlock many airlines at once rather than one at a time. If your airline is not supported yet, send us your roster from inside the app (a one-tap consented flow) or email it to <a href="mailto:support@altivra.io" style="color:var(--sky-bright);">support@altivra.io</a> — we'll work on it. Manual entry and CSV import work for every pilot in the meantime.</div>
       </details>
 
       <details class="faq-item reveal">
@@ -1733,9 +1491,8 @@
       <details class="faq-item reveal">
         <summary>Do I need an Apple Watch for the fatigue features?</summary>
         <div class="faq-body">
-          <p style="margin-bottom:14px;">No. Altivra reads sleep data from Apple HealthKit, which aggregates input from any source you already use — Apple Watch, ring trackers, fitness wearables, or manual entry in the Health app. At v1.0 launch, this lives on iPad — your sleep data flows into HealthKit and then into Altivra automatically, regardless of which tracker you use.</p>
-          <p style="margin-bottom:14px;">A dedicated Altivra Apple Watch app (notifications, on-wrist quick checks, sleep tracking direct) and iPhone companion arrive in v1.1, included with HEAVY.</p>
-          <p>Advanced Watch-only features (on-wrist AI fatigue alerts, HRV correlation, real-time coaching, premium complications) require Apple Watch and ship with SUPER tier in v1.1.</p>
+          <p style="margin-bottom:14px;">No. Altivra reads sleep data from Apple HealthKit, which aggregates input from any source you already use — Apple Watch, ring trackers, fitness wearables, or manual entry in the Health app. Your sleep data flows into HealthKit and then into Altivra automatically, regardless of which tracker you use.</p>
+          <p>A dedicated Altivra Apple Watch app (notifications, on-wrist quick checks) arrives in v1.1. The iPhone companion ships at launch.</p>
         </div>
       </details>
 
@@ -1746,35 +1503,28 @@
 
       <details class="faq-item reveal">
         <summary>Can I pay monthly?</summary>
-        <div class="faq-body">Yes — MEDIUM is $69.99/year or $8.99/month. HEAVY is $99/year or $12.99/month. SUPER (v1.1) is $129.99/year or $17.99/month. The Founding 500 tier is annual only at $79.99/yr — it's a commitment to the early journey in exchange for the annual rate locked for life.</div>
+        <div class="faq-body">Yes — $99/year or $9.99/month. Same features either way. Billed through the App Store.</div>
       </details>
 
       <details class="faq-item reveal">
-        <summary>What is Wingman? What is Wingman+ AAI?</summary>
+        <summary>What is Wingman?</summary>
         <div class="faq-body">
-          <p style="margin-bottom:14px;"><strong>Wingman</strong> answers questions about your own flying — your logbook, roster and rest — and looks up FAR 117 / EASA regulations, instantly and offline. Ask "how many layovers in Tokyo this quarter?" or "what's my 28-day flight time?" and get the answer from your own data. <strong>Included with HEAVY.</strong> Conversational AI powered by a language model arrives with <strong>Wingman+ in v1.1</strong>.</p>
-          <p><strong>Wingman+ AAI</strong> (Advanced AI) is the SUPER-tier upgrade arriving in v1.1: deeper reasoning, larger context windows, and higher usage caps for power users. <strong>Coming Soon v1.1.</strong></p>
+          <p style="margin-bottom:14px;"><strong>Wingman</strong> answers questions about your own flying — your logbook, roster and rest — and looks up FAR 117 / EASA / AFAC regulations, instantly and offline. Ask "how many layovers in Tokyo this quarter?" or "what's my 28-day flight time?" and get the answer from your own data.</p>
+          <p>Conversational AI powered by a language model arrives in a future update — until then, Wingman is a fast, offline lookup, not a chatbot.</p>
         </div>
       </details>
 
       <details class="faq-item reveal">
-        <summary>What about FlightAware live tracking? I'm worried about cost.</summary>
+        <summary>What about FlightAware — is there an extra cost?</summary>
         <div class="faq-body">
-          <p style="margin-bottom:14px;">Live tracking is a SUPER tier feature shipping in v1.1. It works one of two ways:</p>
-          <p style="margin-bottom:14px;"><strong>1. Included quota</strong>: SUPER subscribers get 100 FlightAware queries per month included. If you want more, you can buy bundles ($9.99 for 50 additional queries, $19.99 for 150).</p>
-          <p style="margin-bottom:14px;"><strong>2. BYOK (bring your own key)</strong>: If you already have an AeroAPI account (many airline pilots have one through work or for personal projects), you can connect it to Altivra for unlimited queries. The cost stays on your AeroAPI account, not on your Altivra subscription.</p>
-          <p>HEAVY tier has no FlightAware access. If you want it, you upgrade to SUPER.</p>
+          <p style="margin-bottom:14px;">No. FlightAware enrichment is included with Altivra at no extra cost. Each logged flight is enriched once (real routing, gates, actual block times) and saved — re-checks only when you ask for one.</p>
+          <p>A fair-use quota of <strong>150 lookups per month</strong> comfortably covers a full airline month of flying. No add-ons, no bundles, no separate key required.</p>
         </div>
       </details>
 
       <details class="faq-item reveal">
         <summary>How does FlightAware enrichment work?</summary>
-        <div class="faq-body">Every flight you log is automatically matched against FlightAware's real-time flight data — actual routing, gate and terminal assignments, real block times, diversions. You don't have to enter anything manually beyond the flight number and date. The enrichment runs server-side so your iPad isn't making API calls. It's a <strong>SUPER-tier</strong> feature arriving in Altivra v1.1 (the per-flight API cost is why it lives in the premium tier — we wanted the server-side cost controls rock-solid before charging for it).</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>Will prices go up after launch?</summary>
-        <div class="faq-body">Yes — deliberately. The $99/yr HEAVY rate is intentionally priced under what most pilots are paying across multiple fragmented apps. Once Altivra matures past public launch, HEAVY pricing will rise (likely toward $119/yr in a future cycle). SUPER starts at $129.99/yr and is unlikely to drop. <strong>Founding 500 members are immune to all future increases</strong> — the $79.99/yr rate stays locked on HEAVY for as long as you stay continuously subscribed.</div>
+        <div class="faq-body">Every flight you log is automatically matched against FlightAware's flight data — actual routing, gate and terminal assignments, real block times, diversions. You don't enter anything beyond the flight number and date. The enrichment runs server-side once per flight, so your iPad isn't making API calls in flight. Included with Altivra, fair-use quota.</div>
       </details>
     </div>
   </div>
@@ -1786,17 +1536,14 @@
     <div class="reveal">
       <span class="eyebrow">
         <span class="pulse"></span>
-        Join the Founding 500
+        Launching August 2026
       </span>
       <h2><span class="display-gradient">Your next flight </span><span class="accent">deserves better.</span></h2>
-      <p>Altivra launches August 2026. The first 500 pilots to subscribe lock in HEAVY at $79.99/year — annual rate locked for life.<sup style="color:var(--sky-bright);font-size:0.6em;margin-left:2px;">*</sup></p>
-      <p style="margin:-24px auto 34px;font-size:12px;color:var(--muted);line-height:1.5;max-width:560px;">
-        <span style="color:var(--sky-bright);">*</span> Auto-renewing annual subscription. The locked-for-life rate applies as long as the subscription remains continuously active.
-      </p>
+      <p>One edition, everything included — $99/year or $9.99/month, with a 30-day full trial.</p>
 
       <form class="waitlist" id="waitlist-bottom" novalidate style="margin: 0 auto;">
         <input type="email" name="email" placeholder="captain@yourairline.com" autocomplete="email" required aria-label="Your email address" />
-        <button type="submit">Reserve my seat</button>
+        <button type="submit">Join the waitlist</button>
       </form>
     </div>
   </div>
@@ -1822,7 +1569,7 @@
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#waitlist">Reserve seat</a>
+        <a href="#waitlist">Join waitlist</a>
       </div>
 
       <div class="footer-col">
@@ -1850,7 +1597,7 @@
   // ═══  FIREBASE — waitlist capture + app check  ═══
   import { initializeApp }
     from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, doc, getDoc, serverTimestamp }
+  import { getFirestore, collection, addDoc, serverTimestamp }
     from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
   import { initializeAppCheck, ReCaptchaV3Provider }
     from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app-check.js";
@@ -1874,25 +1621,6 @@
   });
 
   const db = getFirestore(app);
-
-  // ═══  Founding 500 public counter  ═══
-  const loadFoundingCounter = async () => {
-    try {
-      const statsRef  = doc(db, 'stats', 'waitlist');
-      const statsSnap = await getDoc(statsRef);
-      if (!statsSnap.exists()) return;
-      const count = statsSnap.data().count || 0;
-      const countEl = document.getElementById('founding-count');
-      const remEl   = document.getElementById('founding-remaining');
-      if (countEl) countEl.textContent = count;
-      if (remEl)   remEl.textContent   = Math.max(0, 500 - count);
-      document.querySelectorAll('.founding-counter').forEach(el => el.classList.add('visible'));
-    } catch (err) {
-      // Silent — counter is a nice-to-have, never blocks the page
-      console.warn('Counter read failed:', err);
-    }
-  };
-  loadFoundingCounter();
 
   // ═══  NAV scroll effect  ═══
   const nav = document.getElementById('nav');
